@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+    /* background-image: url(./satellite.jpg.jpeg); */
+}
+
+/* Navbar */
+
+nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* NAVBAR */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+    z-index: 1000;
+}
+
+/* LOGO */
+
+nav h1{
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* MENU */
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: flex;
+    align-items: center;
+}
+
+/* LINKS */
+
+nav ul li a{
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 35px;
+    /* border: 2px solid white; */
+    color: white;
+    text-decoration: none;
+    /* font-size: 14px; */
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav ul li a:hover{
+    background: white;
+    color: black;
+}
+
+/* WATCH BUTTON */
+
+.watch-btn{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 2;
+
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.watch-btn:hover{
+    background: white;
+    color: black;
+}
+/* Hero Section */
+
+.hero{
+    height: 100vh;
+    background-image: url("./photo-1548625361-58a9b86aa83b.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero h2{
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 2;
+}
+
+/* .rocket{ */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* height: 70%; */
+    /* width: 60%; */
+    /* border-radius: 20px; */
+    /* transition: 10s; */
+
+
+
+.hero button{
+    width: 180px;
+    padding: 15px;
+    
+    background: transparent;
+    color: white;
+    
+    border: 2px solid white;
+    
+    font-size: 18px;
+    cursor: pointer;
+    
+    transition: 0.4s;
+}
+
+
+
+.hero button:hover{
+    background-color: white;
+    color: black;
+    /* padding-bottom: 20PX; */
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* SECOND PAGE */
+
+.mars-section{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 80px;
+}
+
+.mars-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0)
+    );
+    z-index: 1;
+}
+
+/* IMAGE SIDE */
+.mars-image{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    /* perspective: 1000px; */
+}
+
+.mars-image img{
+    width: 400px;
+    border-radius: 50%;
+    animation: planetRotate 20s linear infinite;
+}
+
+@keyframes planetRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+
+    /* animation: marsFloat 1s ease-out forwards,
+               floating 1s ease-in-out infinite 3s; */
+}
+
+/* TEXT SIDE (IMPORTANT FIX) */
+.mars-section .content{
+    width: 45%;
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+/* HEADING */
+.mars-section .content h1{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* PARAGRAPH */
+.mars-section .content p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cfcfcf;
+    margin-bottom: 35px;
+}
+
+/* BUTTON */
+.mars-section .content button{
+    padding: 14px 35px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.explore-btn:hover{
+    background-color: white !important;
+    color: black !important;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes marsFloat{
+    from{
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floating{
+    0%{ transform: translateY(0); }
+    50%{ transform: translateY(-15px); }
+    100%{ transform: translateY(0); }
+}
+
+.starship-section{
+    width:100%;
+    min-height:100vh;
+
+    background-image:url("./1781002443806.jpg.jpeg");
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    padding-right:8%;
+    position:relative;
+}
+
+.starship-content{
+    width:400x;
+    /* background:rgba(0,0,0,0.45); */
+    /* backdrop-filter:blur(8px); */
+    /* -webkit-backdrop-filter:blur(8px); */
+    font-size: 100px;
+    text-align: right;
+    position: relative;
+    top: -50px;
+    padding:40px;
+    border-radius:15px;
+    color:white;
+}
+
+.starship-content h1{
+    font-size:40px;
+    font-weight:800;
+    line-height:1;
+    word-wrap: break-word;
+    margin-bottom:25px;
+}
+
+.starship-content p{
+    font-size:1rem;
+    line-height:1.8;
+    color:#e0e0e0;
+    margin-bottom:25px;
+    text-align: right !important;
+    width: 400px;
+}
+
+.starship-content button{
+    padding:12px 24px;
+    background:transparent;
+    border:1px solid white;
+    color:white;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.starship-content button:hover{
+    background:white;
+    color:black;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.spaceship-section {
+    height: 100vh;
+    background: url("./background.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Dark overlay */
+ /* .spaceship-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.45) 25%,
+        rgba(0, 0, 0, 0) 100%
+    );
+} */ 
+
+/* Text container */
+.spaceship-section > div {
+    position: absolute;
+    background: transparent;
+    top: 50px;
+    left: 60px;
+    z-index: 2;
+    color: white;
+    max-width: 650px;
+}
+
+/* Heading */
+.spaceship-section h1 {
+    font-size: 30px;
+
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Paragraph */
+.spaceship-section p {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 35px;
+    max-width: 600px;
+}
+
+/* Button */
+.spaceship-section button {
+    padding: 18px 30px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.spaceship-section button:hover {
+    background: white;
+    color: black;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Background Section */
+.spaceflight{
+    min-height: 100vh;
+    background-image: url("./Advancing_Human_Spaceflight_Desktop_61c8ba1c67-1024x576.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    position: relative;
+}
+
+/* nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 80px;
+} */
+
+.logo{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+} */
+
+.spaceflightcontent{
+    width: 40%;
+
+    position: absolute;
+    top: 80px;
+    left: auto;
+    right: 80px;
+
+    /* transform: none; */
+    /* text-align: left; */
+    
+}
+
+.content h1{
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.spaceflightcontent p1{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.spaceflightcontent button{
+    padding: 15px 35px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.spaceflightcontent button:hover{
+    background: white;
+    color: black;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.starlink-section{
+    min-height:100vh;
+
+    background-image:url("./satellite.jpg.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+}
+
+.starlink-content{
+    position:relative;
+    z-index:2;
+
+    color:white;
+    width:700px;
+
+    margin-left:120px;
+}
+
+.starlink-content h1{
+    font-size:45px;
+    line-height:1;
+    margin-bottom:25px;
+    font-weight:900;
+}
+
+.starlink-content p{
+    font-size:22px;
+    line-height:1.6;
+    margin-bottom:35px;
+    max-width:800px;
+}
+
+.starlink-btn{
+    padding:18px 40px;
+    font-size:18px;
+
+    background:transparent;
+    color:white;
+
+    border:2px solid white;
+
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.starlink-btn:hover{
+    background:white;
+    color:black;
+}
+
+.starlink-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.starlink-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+
+    background:white;
+    transition:0.4s;
+    z-index:-1;
+}
+
+.starlink-btn:hover::before{
+    left:0;
+}
+
+.starlink-btn:hover{
+    color:black;
+}

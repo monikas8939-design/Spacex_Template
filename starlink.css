@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+section{
+    min-height:100vh;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.top-bar,
+.navbar{
+    width:100%;
+    padding:20px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:5px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a,
+.nav-right a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero-content,
+.content{
+    position:absolute;
+    left:80px;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    width:500px;
+}
+
+.hero-content h1,
+.content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.content p{
+    line-height:1.8;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+button{
+    padding:14px 35px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.transparent{
+    background:none;
+    color:white;
+    border:1px solid white;
+}
+
+.hero{
+    background-image:url("./prajavani_2026-06-10_yjcb9hi7_starlink.jpg");
+}
+
+.weather{
+    background-image:url("./1781501481462.jpg.jpeg");
+}
+
+.travel{
+    background-image:url("./1781501999499.png");
+}
+
+.install{
+    background-image:url("./1781502013719.png");
+}
+
+.pricing{
+    background:#0a0f1f;
+    padding:150px 50px;
+}
+
+.plan-container{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.plan-card{
+    width:350px;
+    padding:40px;
+    background:#1c2338;
+    color:white;
+    border-radius:20px;
+}
+
+.plan-card h2{
+    margin-bottom:20px;
+}
+
+.plan-card ul{
+    margin:20px 0;
+    padding-left:20px;
+}
+
+.plan-card h3{
+    font-size:50px;
+    margin-top:30px;
+}
+
+@media(max-width:992px){
+
+    .hero-content,
+    .content{
+        width:90%;
+        left:30px;
+    }
+
+    .hero-content h1,
+    .content h1{
+        font-size:50px;
+    }
+
+    .navbar,
+    .top-bar{
+        padding:20px;
+    }
+}
+
+@media(max-width:768px){
+
+    nav{
+        display:none;
+    }
+
+    .hero-content h1,
+    .content h1{
+        font-size:38px;
+    }
+
+    .hero-content,
+    .content{
+        left:20px;
+    }
+
+    .plan-card{
+        width:100%;
+    }
+}

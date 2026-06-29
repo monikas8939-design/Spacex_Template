@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+}
+
+/* HERO */
+
+.starshield-hero{
+    height:100vh;
+    background:url("./STARSHILD.jpg");
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:90px;
+    font-weight:900;
+}
+
+.hero-content p{
+    margin-top:15px;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+/* SECTION 2 */
+
+.network-section{
+    min-height:100vh;
+    background:black;
+    padding:80px 60px;
+}
+
+.top-content{
+    display:flex;
+    justify-content:space-between;
+    gap:80px;
+    margin-bottom:80px;
+}
+
+.left-content{
+    flex:1;
+}
+
+.left-content h1{
+    font-size:60px;
+    line-height:1.1;
+}
+
+.right-content{
+    flex:1;
+}
+
+.right-content p{
+    font-size:20px;
+    line-height:1.8;
+    color:#dcdcdc;
+}
+
+/* CARDS */
+
+.feature-container{
+    display:flex;
+    gap:30px;
+}
+
+.feature-box{
+    flex:1;
+    border-top:2px solid white;
+    padding-top:30px;
+}
+
+.feature-box h2{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.feature-box p{
+    font-size:18px;
+    line-height:1.7;
+    color:#cfcfcf;
+}
+
+@media(max-width:992px){
+
+    .top-content{
+        flex-direction:column;
+    }
+
+    .feature-container{
+        flex-direction:column;
+    }
+
+    .hero-content h1{
+        font-size:60px;
+    }
+
+    .left-content h1{
+        font-size:45px;
+    }
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Common Section */
+.feature{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+
+/* Background Image */
+.feature img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Dark Overlay */
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+/* Content */
+.content{
+    position:relative;
+    z-index:2;
+    color:white;
+    width:40%;
+}
+
+.content h2{
+    font-size:70px;
+    font-weight:700;
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.content p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* Right Content */
+.feature-right{
+    justify-content:flex-end;
+}
+
+.feature-right .content{
+    margin-right:120px;
+}
+
+/* Left Content */
+.feature-left{
+    justify-content:flex-start;
+}
+
+.feature-left .content{
+    margin-left:50px;
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .content{
+        width:70%;
+    }
+
+    .content h2{
+        font-size:50px;
+    }
+
+    .content p{
+        font-size:18px;
+    }
+
+    .feature-right .content{
+        margin-right:50px;
+    }
+
+    .feature-left .content{
+        margin-left:50px;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .feature{
+        height:80vh;
+        align-items:flex-end;
+    }
+
+    .content{
+        width:90%;
+        margin:40px !important;
+    }
+
+    .content h2{
+        font-size:38px;
+    }
+
+    .content p{
+        font-size:16px;
+        line-height:1.6;
+    }
+}
+
